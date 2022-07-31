@@ -1,6 +1,14 @@
 import Button from "@/Components/Button";
 
-export default function SubscriptionCard({ id, name, price, durationInMonth, features, isPremium, onSelectSubscription }) {
+export default function SubscriptionCard({ 
+    id, 
+    name, 
+    price, 
+    durationInMonth, 
+    features, 
+    isPremium, 
+    onSelectSubscription 
+}) {
     return (
         <>
             {/* Basic */}
@@ -39,9 +47,7 @@ export default function SubscriptionCard({ id, name, price, durationInMonth, fea
             )}
             {/* For Greatest */}
             {isPremium && (
-                <div
-                className="flex flex-col gap-[30px] py-[30px] px-7 outline outline-1 outline-[#F1F1F1] rounded-[26px] text-white w-[300px] bg-black">
-
+                <div className="flex flex-col gap-[30px] py-[30px] px-7 outline outline-1 outline-[#F1F1F1] rounded-[26px] text-white w-[300px] bg-black">
                 {/* Ornament Icon */}
                 <div className="bg-alerange rounded-full p-[13px] max-w-max">
                     <img src="/icons/ic_star.svg" width="24" alt="" />
@@ -52,7 +58,9 @@ export default function SubscriptionCard({ id, name, price, durationInMonth, fea
                     <div className="text-[28px] font-bold">
                         IDR {price.toLocaleString()}
                     </div>
-                    <p className="text-[#767676] text-xs font-light">/{durationInMonth} months</p>
+                    <p className="text-[#767676] text-xs font-light">
+                        /{durationInMonth} months
+                    </p>
                 </div>
 
                 {/* Mid Content: Benefits */}
@@ -90,9 +98,8 @@ export default function SubscriptionCard({ id, name, price, durationInMonth, fea
                 </div>
 
                 {/* Bottom: CTA Button */}
-                <div>
-                    <Button 
-                        type="button">
+                <div onClick={onSelectSubscription}>
+                    <Button type="button">
                         <span className="text-base font-semibold">
                             Subscribe Now
                         </span>
