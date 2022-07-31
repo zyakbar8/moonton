@@ -35,7 +35,7 @@ export default function Register() {
                                 type="text" 
                                 name="fullname"
                                 placeholder="Your fullname..." 
-                                value="Fauzi Akbar" 
+                                defaultValue="Fauzi Akbar" 
                             />
                         </div>
                         <div>
